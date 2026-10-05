@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aryan Pal | Web Developer</title>
+<style>
+:root{--bg:#f6f7f4;--ink:#17201b;--mute:#5d6a62;--accent:#1f6f54;--card:#fff;--line:#dfe4de}
+@media(prefers-color-scheme:dark){:root{--bg:#101613;--ink:#e9efe9;--mute:#9aa8a0;--accent:#5fcf9f;--card:#18211c;--line:#26332b}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+body{background:var(--bg);color:var(--ink);font:1.05rem/1.65 Georgia,'Times New Roman',serif}
+nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:.9rem 5vw;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav b{font-size:1.1rem}
+nav a{color:var(--ink);text-decoration:none;margin-left:1.2rem;font-family:system-ui,sans-serif;font-size:.95rem;transition:color .2s}
+nav a:hover{color:var(--accent)}
+section{max-width:960px;margin:auto;padding:4.5rem 5vw}
+h1{font-size:clamp(2.4rem,7vw,4.5rem);line-height:1.08;font-weight:400}
+h2{font-size:1.9rem;font-weight:400;margin-bottom:1.5rem}
+p{max-width:62ch;color:var(--mute)}
+.hero p{margin:1.2rem 0 1.8rem;font-size:1.2rem}
+.btn{display:inline-block;padding:.7rem 1.4rem;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-family:system-ui,sans-serif;border-radius:6px;margin-right:.6rem;transition:.25s}
+.btn.fill,.btn:hover{background:var(--accent);color:var(--bg)}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.skills span{font-family:system-ui,sans-serif;font-size:.9rem;padding:.35rem .9rem;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.4rem;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent)}
+.card h3{font-weight:400;font-size:1.25rem;margin-bottom:.4rem}
+.card a{color:var(--accent);font-family:system-ui,sans-serif;font-size:.9rem}
+.card p{font-size:.98rem;margin-bottom:.8rem}
+.resume li{margin:0 0 1rem 1.2rem;color:var(--mute)}
+.resume li b{color:var(--ink);font-weight:400}
+form{display:grid;gap:.8rem;max-width:480px;margin-top:1rem}
+input,textarea{font:inherit;padding:.7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+input:focus,textarea:focus{outline:2px solid var(--accent)}
+form button{cursor:pointer;font:inherit;border:0;background:var(--accent);color:var(--bg);padding:.75rem;border-radius:6px}
+footer{text-align:center;padding:2rem;color:var(--mute);font-size:.9rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:560px){nav a{margin-left:.7rem;font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<nav>
+  <b>Aryan Pal</b>
+  <div><a href="#about">About</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a></div>
+</nav>
+
+<section class="hero" id="home">
+  <h1>Hi, I'm Aryan Pal.<br>I build things for the web.</h1>
+  <p>Web development intern focused on clean, responsive interfaces built with HTML, CSS and JavaScript.</p>
+  <a class="btn fill" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a>
+</section>
+
+<section id="about" class="reveal">
+  <h2>About</h2>
+  <p>I'm a student learning front-end development by building small, complete projects: galleries, tools and sites. I like clear layouts, readable code and interfaces that work on any screen.</p>
+  <div class="skills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive design</span><span>Git &amp; GitHub</span></div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card"><h3>Image Gallery</h3><p>Filterable gallery with a lightbox, keyboard navigation and smooth transitions.</p><a href="https://aryanpal.github.io/project1-image-gallery/">View project</a></div>
+    <div class="card"><h3>Calculator</h3><p>Basic calculator with all four operations and full keyboard support.</p><a href="https://aryanpal.github.io/project2-calculator/">View project</a></div>
+    <div class="card"><h3>Portfolio Site</h3><p>This site: responsive, with smooth scrolling and light/dark themes.</p><a href="#home">Back to top</a></div>
+  </div>
+</section>
+
+<section id="resume" class="reveal">
+  <h2>Resume</h2>
+  <ul class="resume">
+    <li><b>Web Development Intern, CodeAlpha</b><br>Building a gallery, a calculator and a portfolio site.</li>
+    <li><b>Education</b><br>Your degree, your university, expected year.</li>
+    <li><b>Skills</b><br>HTML, CSS, JavaScript, Git.</li>
+  </ul>
+  <a class="btn" href="resume.pdf" download>Download resume</a>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:your-email@example.com" style="color:var(--accent)">your-email@example.com</a> &middot; GitHub: github.com/aryanpal</p>
+  <form id="f">
+    <input required placeholder="Your name" aria-label="Your name">
+    <input required type="email" placeholder="Your email" aria-label="Your email">
+    <textarea required rows="4" placeholder="Message" aria-label="Message"></textarea>
+    <button>Send message</button>
+  </form>
+</section>
+<footer>&copy; 2026 Aryan Pal</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('f').onsubmit=e=>{e.preventDefault();e.target.querySelector('button').textContent='Message sent';e.target.reset()};
+</script>
+</body>
+</html>
